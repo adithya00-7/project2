@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@layer components{
+    .btn{
+        border-radius: 2px;
+        background-color: #00D09C;
+        padding-inline: --spacing(6);
+        padding-block: --spacing(2);
+        width: 209px;
+        height: 52px;
+    }
+}
