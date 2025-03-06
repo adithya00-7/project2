@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoFunds</title>
-    <link href="/css/output.css" rel="stylesheet">
+    <link href="./css/output.css" rel="stylesheet">
 </head>
 <body>
     <header class="h-[102px]">
-        <div class="flex h-[30px] bg-[#E4FAF4] justify-center">
+        <div class=" hidden md:flex h-[30px] bg-[#E4FAF4] justify-center">
+            
             <ul class="container flex justify-end gap-3">
                 <li>
                     <a href="" class="flex gap-2">
@@ -22,11 +23,19 @@
             </ul>
             
         </div>
-        <div class="container mx-auto flex h-[72px] mt-[30px] items-center justify-between">
+        <div class="container mx-auto flex h-[72px] md:mt-[30px] items-center justify-between">
             <div class="flex gap-3">
-                <img class="text-[26px] h-[34px] mt-3.5" src="./assets/logo.svg">
+                <img class="text-[26px] h-[34px]" src="./assets/logo.svg">
             </div>
-            <ul class="flex gap-3 ml-2 items-center">
+            <div>
+                <button id="menu-toggle" class="block md:hidden p-2">
+                    <div class="w-6 h-0.5 bg-black mb-1"></div>
+                    <div class="w-6 h-0.5 bg-black mb-1"></div>
+                    <div class="w-6 h-0.5 bg-black"></div>
+                </button>
+                
+            </div>
+            <ul class="hidden md:flex gap-3 ml-2 items-center">
                 <li><div class="bg-[#F5F5F5] w-[240px] h-[42px] flex items-center gap-1.5 rounded-md">
                     <img class="h-[15px] w-[15px]" src="./assets/search.svg">
                     <input type="search" placeholder="Search all mutual funds" class="bg-transparent focus:outline-none w-full">
@@ -37,10 +46,16 @@
                 <li class="font-bold"><a href="">Login/Register</a></li>
             </ul>
         </div>
+        <div class="max-w-[375px] md:w-auto mt-3 md:hidden mt-0">
+            <div class="bg-[#F5F5F5] w-full md:w-[240px] h-[42px] flex items-center gap-1.5 rounded-md">
+                <img class="h-[15px] w-[15px]" src="./assets/search.svg">
+                <input type="search" placeholder="Search all mutual funds" class="bg-transparent focus:outline-none w-full">
+            </div>
+        </div>
           
     </header>
     <section class="container mx-auto items-center justify-between flex">
-        <div class="mt-[100px] text-[40px] max-w-[427px]">
+        <div class="mt-[100px] text-[40px] max-w-[427px] mx-auto md:mx-0">
             <h1 class="text-[40px] max-w-96 mb-3.5">
                 Investing made
                 <span class="relative">
@@ -56,15 +71,15 @@
             </p>
             <button class="btn text-[18px] text-white font-semibold">Get Started Now</button>
         </div>
-        <div class="mt-[60px]">
+        <div class="hidden md:block mt-[60px]">
             <img src="./assets/banner1.jpg">
         </div>
     </section>
-    <section class="h-[190px] bg-[#E4FAF4] mt-[60px]">
-        <div class="container text-[30px] justify-between mx-auto items-center flex">
-            <div class="my-10">
+    <section class="h-[403px] md:h-[190px] bg-[#E4FAF4] mt-[60px]">
+        <div class="max-sm:flex-col  container text-[30px] justify-between mx-auto items-center flex">
+            <div class=" my-10">
                 <h1>Trusted by Millions of People</h1>
-                <p class="text-gray-500 w-[504px] text-[17px]">We are registered as a distributor with AMFI, as an investment advisor with SEBI and platform partners with BSE.</p>
+                <p class="max-sm:max-w-[335px] text-gray-500 w-[504px] text-[17px]">We are registered as a distributor with AMFI, as an investment advisor with SEBI and platform partners with BSE.</p>
             </div>
             <div class="flex justify-between items-center gap-3">
                 <div class="h-[110px] w-[110px] items-center justify-center flex-col flex">
@@ -84,8 +99,8 @@
         </div>
 
     </section>
-    <section class="h-[650px]">
-        <div class="flex container justify-around mx-auto mt-[161px]">
+    <section class="max-sm:h-auto max-sm:text-center max-sm:mb-[50px] h-[650px]">
+        <div class="max-sm:mx-5 max-sm:flex-col flex container justify-around mx-auto mt-[161px] max-sm:justify-center">
             <div>
                 <img src="./assets/Fund.svg">
             </div>
@@ -131,16 +146,16 @@
         </div>
 
     </section>
-    <section class="h-[850px] bg-gradient-to-b from-[#E4FAF4] to-white">
-        <div class="container text-[40px] justify-between mx-auto items-center flex">
-            <div class="mb-[30px]">
-                <div class="my-10">
+    <section class="max-sm:h-auto  h-[850px] bg-gradient-to-b from-[#E4FAF4] to-white">
+        <div class="max-sm:flex-col container text-[40px] justify-between mx-auto items-center flex">
+            <div class="max-sm:w-[400px] mb-[30px] ">
+                <div class=" my-10">
                     <h1>Ask the Expert</h1>
                     <p class="text-gray-500 w-[504px] text-[17px]">You can schedule a meeting with an expense manager</p>
                 </div>
-                <div class="flex gap-4">
+                <div class="max-sm:flex-col flex gap-4">
                 <div>
-                    <img class="w-[62px] h-[62px] mb-[30px] bg-[#E8F9F5]"src="./assets/cash.svg">
+                    <div class="bg-[#E8F9F5] w-[62px] h-[62px] flex justify-center items-center"><img class=" bg-[#E8F9F5]"src="./assets/cash.svg"></div>
                     <h3 class="text-[24px] mb-[20px]">Investing made easy</h3>
                     <p class="text-gray-500 w-[260px] text-[17px] mb-[25px]">Three simple options- cautions, balanced, adventurous.Expert will take care of rest!</p>
                     <button class="btn text-[18px] text-white font-semibold">Get Started Now</button>
@@ -148,7 +163,7 @@
 
                 </div>
                 <div>
-                    <img class="w-[62px] h-[62px] mb-[30px] bg-[#E8F9F5]"src="./assets/Schedule.svg">
+                    <div class="bg-[#E8F9F5] w-[62px] h-[62px] flex justify-center items-center"><img class=" bg-[#E8F9F5]"src="./assets/Schedule.svg"></div>
                     <h3 class="text-[24px] mb-[20px]">Schedule a meeting</h3>
                     <p class="text-gray-500 w-[260px] text-[17px]">Expert will give you the best advice. Schedule a meeting with the expert to know mutual funds better.</p>
                     <button class="btn text-[18px] text-white font-semibold">Get Started Now</button>
@@ -156,7 +171,7 @@
                 </div>
                 </div>
             </div>
-            <div class="mt-[60px]">
+            <div class="max-sm:hidden mt-[60px]">
                 <img src="./assets/Expert.png">
             </div>
 
@@ -166,7 +181,7 @@
     <section class="h-[450px]">
         <div class="container text-[30px] justify-center mx-auto items-center flex flex-col">
             <div>
-            <h3 class="text-[30px] mb-[25px]">Manage your investment from your hand</h3>
+            <h3 class="max-sm:max-w-[335px] max-sm:text-center text-[30px] mb-[25px] flex">Manage your investment from your hand</h3>
             </div>
             <div class="text-[17px] text-gray-500 w-[400px] items-center text-center mb-[30px]">
                 <p >Now you will be at ease of investing, buying and selling easier with just a click.</p>
@@ -186,13 +201,13 @@
         </div>
 
     </section>
-    <section class="h-[300px]">
-        <div class="container text-[30px] justify-between mx-auto items-center flex">
+    <section class="max-sm:h-auto h-[300px]">
+        <div class="max-sm:flex-col container text-[30px] justify-between mx-auto items-center flex">
             <div>
-                <img class="h-[200px] w-[200px]"src="./assets/Group 19.png">
+                <img src="./assets/Screenshot from 2025-03-05 11-39-49.png">
                 <h4 class="flex justify-center items-center">Neo Funds</h4>
             </div>
-            <div class="flex gap-[30px]">
+            <div class="max-sm:flex-col flex gap-[50px]">
                 <div class="gap-3">
                     <h4 class="text-[17px]">Quick Links</h4>
                     <p class="text-[15px] text-gray-400">Explore Funds</p>
@@ -222,7 +237,7 @@
                     <p class="text-[15px] text-gray-400">Calculators</p>
                     <p class="text-[15px] text-gray-400">Beginner's Guide</p>
                     <p class="text-[15px] text-gray-400 mb-[30px]">Sitemap</p>
-                    <h4 class="text-[17px]">Download the App</h4>
+                    <h4 class="text-[17px] mb-[15px]">Download the App</h4>
                     <div class="flex gap-2.5">
                         <img class="h-[32px] w-[32px]"src="./assets/app3.svg">
                         <img class="h-[32px] w-[32px]"src="./assets/app4.svg">
