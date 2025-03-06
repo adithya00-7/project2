@@ -10,7 +10,7 @@
         height: 52px;
     }
     .btn:hover {
-        background-color: #00B386; /* Darker shade for hover effect */
-        cursor: pointer; /* Changes cursor to indicate clickability */
+        background-color: #00B386;
+        cursor: pointer; 
     }
 }
